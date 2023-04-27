@@ -1,0 +1,167 @@
+.lecturer {
+    padding-bottom: 85px;
+    .row {
+        margin-left: -18px;
+        margin-right: -18px;
+        >div {
+            padding-left: 18px;
+            padding-right: 18px;
+        }
+    }
+    &_item {
+        background-color: $gray-f6;
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    &_pic {
+        width: 30%;
+        padding-bottom: calc(30% * 1.79);
+        position: relative;
+        display: block;
+        >img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+    }
+    &_text {
+        width: 70%;
+        padding: 30px 30px 20px;
+    }
+    &_name {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    &_class {
+        color: $main-color;
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 35px;
+        span {
+            &:first-child {
+                margin-right: 10px;
+            }
+        }
+    }
+    &_intro {
+        font-size: 16px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        -webkit-line-clamp: 6;
+        line-height: 1.5;
+        margin: 0;
+    }
+    &_detail {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        margin-bottom: 50px;
+        &_pic {
+            width: 30%;
+            padding-bottom: calc(30% * 1.79);
+            position: relative;
+            >img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                object-fit: cover;
+            }
+        }
+        &_text {
+            width: 70%;
+            padding-left: 25px;
+        }
+        &_name {
+            font-size: 40px;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        &_class {
+            color: $main-color;
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            span {
+                padding-right: 21px;
+                position: relative;
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 1px;
+                    height: 20px;
+                    background-color: $main-color;
+                    top: 8px;
+                    right: 10px;
+                }
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &_intro {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 45px;
+            line-height: 1.3;
+        }
+    }
+    &_btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 110px !important;
+        height: 36px;
+        color: #fff !important;
+        text-decoration: none !important;
+        font-size: 18px;
+        font-weight: 500;
+        margin: 0 auto;
+    }
+    @media screen and (max-width: 767px) {
+        &_item {
+            margin-bottom: 25px;
+        }
+        &_text {
+            padding: 10px 20px 20px;
+        }
+        &_intro {
+            -webkit-line-clamp: 4;
+            font-size: 14px;
+        }
+        &_class {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        &_name {
+            font-size: 20px;
+        }
+        &_detail {
+            display: block;
+            margin-bottom: 95px;
+            &_pic {
+                width: 100%;
+                padding-bottom: 179%;
+            }
+            &_text {
+                width: 100%;
+                padding: 20px 0 0;
+            }
+            &_name {
+                font-size: 32px;
+            }
+            &_class, &_intro {
+                font-size: 20px;
+            }
+        }
+    }
+}

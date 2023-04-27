@@ -1,0 +1,102 @@
+.coupon {
+    padding: 30px 40px;
+    background-color: $second-blue; 
+    margin-bottom: 75px;
+    &_item {
+        background-color: #fff;
+        margin-bottom: 40px;
+        padding: 10px 15px;
+    }
+    &_title {
+        color: $gray-bb;
+        font-size: 17px;
+        margin-bottom: 3px;
+    }
+    &_num {
+        font-family: $font-mont;
+        color: $main-color;
+        text-decoration: underline;
+        font-size: 18px;
+        font-weight: 500;
+        margin-left: 7px;
+    }
+    &_name {
+        color: $main-color;
+        margin-bottom: 5px;
+        font-size: 24px;
+        font-weight: 500;
+        @include webkitBox;
+        -webkit-line-clamp: 2;
+        max-height: 58px;
+    }
+    &_class {
+        font-size: 18px;
+        @include webkitBox;
+        -webkit-line-clamp: 2;
+        max-height: 54px;
+        margin: 0;
+    }
+    &_badge {
+        text-align: center;
+        border: 1px solid;
+        margin-bottom: 9px;
+        font-size: 16px;
+        width: 80px;
+        &.once {
+            border-color: $main-color;
+            color: $main-color;
+        }
+        &.unlimit {
+            border-color: $main-green;
+            color:  $main-green;
+        }
+        &.limit {
+            border-color: $main-orange;
+            color: $main-orange;
+        }
+    }
+    &_price {
+        margin: 0;
+        position: relative;
+        &::before {
+            position: absolute;
+            content: "";
+            background-color: $second-blue;
+            width: 1px;
+            height: 48px;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%);
+        }
+        >div {
+            padding: 0;
+        }
+    }
+    &_code {
+        padding: 20px 15px;
+        background-color: $second-blue;
+        color: $main-orange;
+        font-size: 24px;
+        font-family: $font-mont;
+        text-align: center;
+        font-weight: 600;
+    }
+    >.row {
+        margin-left: -17px;
+        margin-right: -17px;
+        >div {
+            padding-left: 17px;
+            padding-right: 17px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        padding: 20px 15px;
+        margin-top: 10px;
+        &_item {
+            margin-bottom: 20px;
+        }
+        &_name {
+            font-size: 20px;
+        }
+    }
+}

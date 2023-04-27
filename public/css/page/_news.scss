@@ -1,0 +1,29 @@
+.news {
+    padding-bottom: 140px;
+    .home_news_title {
+        margin-bottom: 5px;
+        a {
+            white-space: inherit;
+            overflow: visible;
+            text-overflow: inherit;
+        }
+
+    }
+    .home_news_date {
+        margin: 0;
+        color: $gray-7d;
+    }
+    &_content {
+        margin-bottom: 25px;
+    }
+    @media screen and (max-width: 575px) {
+        .home_news_title {
+            a {
+                font-size: 20px;
+            }
+        }
+        .home_news_date {
+            font-size: 14px;
+        }
+    }
+}

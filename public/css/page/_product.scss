@@ -1,0 +1,260 @@
+.product {
+    &-list {
+        padding-bottom: 135px;
+        .row {
+            margin-left: -18px;
+            margin-right: -18px;
+            >div {
+                padding-left: 18px;
+                padding-right: 18px;
+                margin-bottom: 40px;
+                // height: 100%;
+                a {
+                    height: 100%;
+                    display: block;
+                    background-color: $second-blue;
+                }
+            }
+        }
+        &_pic {
+            width: 100%;
+            padding-bottom: 77%;
+            position: relative;
+            &::before {
+                position: absolute;
+                content: "";
+                width: 46px;
+                height: 33px;
+                background-image: url(../img/icon_video.svg);
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+                opacity: 0;
+            }
+            >img {
+                @include bgPicCover;
+            }
+            >iframe {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+            }
+            &.video {
+                &::before {
+                    opacity: 1;
+                }
+            }
+        }
+        &_text {
+            padding: 10px 15px 15px;
+            h2 {
+                @include webkitBox;
+                -webkit-line-clamp: 2;
+                font-size: 24px;
+                margin-bottom: 3px;
+                max-height: 58px;
+            }
+            p {
+                @include webkitBox;
+                -webkit-line-clamp: 2;
+                font-size: 16px;
+                margin-bottom: 0;
+                max-height: 48px;
+            }
+        }
+        @media screen and (max-width: 575px) {
+            padding-bottom: 220px;
+            .row {
+                >div {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+    &-inner {
+        background-color: $second-blue;
+        padding: 35px 0 110px;
+        h2 {
+            font-size: 40px;
+            margin-bottom: 12px;
+            font-weight: normal;
+        }
+        h3 {
+            font-size: 24px;
+            margin-bottom: 7px;
+            font-weight: normal;
+        }
+        &_intro {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 45px;
+        }
+        .tab_bg {
+            .nav-link {
+                padding: 10px 50px;
+            }
+        }
+        .tab-content {
+            background-color: #fff;
+            padding: 25px 15px 40px;
+            &#tabContentAttention {
+                padding: 0;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            padding: 35px 0 80px;
+            h2 {
+                font-size: 32px;
+            }
+            h3 {
+                font-size: 20px;
+            }
+            &_intro {
+                font-size: 20px;
+                margin-bottom: 30px;
+            }
+            .tab_bg {
+                .nav-link {
+                    padding: 10px 35px;
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+    &_price {
+        margin-top: 35px;
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        margin-left: -20px;
+        margin-right: -20px;
+        flex-wrap: wrap;
+        &_item {
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 35px;
+        }
+        &_content {
+            padding: 15px;
+            border-radius: 15px;
+            border: 1px solid $gray-bb;
+        }
+        &_period {
+            font-size: 24px;
+            margin-bottom: 5px;
+            text-align: center;
+            font-weight: normal;
+            .highlight {
+                border-radius: 10px;
+                background-color: $main-orange;
+                color: #fff;
+                padding: 3px 10px;
+                font-size: 21px;
+                font-weight: 500;
+                margin-right: 5px;
+            }
+        }
+        &_num {
+            font-family: $font-mont;
+            font-size: 40px;
+            margin-bottom: 10px;
+            font-weight: 500;
+            text-align: center;
+        }
+        &_btn {
+            width: 104px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 18px;
+            font-weight: 500;
+        }
+        @media screen and (max-width: 991px) {
+            margin-left: -10px;
+            margin-right: -10px;
+            &_item {
+                padding-left: 10px;
+                padding-right: 10px;
+                margin-bottom: 15px;
+            }
+            &_period {
+                font-size: 20px;
+                .highlight {
+                    font-size: 15px;
+                    padding: 2px 6px;
+                }
+            }
+            &_num {
+                font-size: 32px;
+            }
+            &_btn {
+                font-size: 16px;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            margin-left: -6px;
+            margin-right: -6px;
+            &_item {
+                padding-left: 6px;
+                padding-right: 6px;
+            }
+        }
+        @media screen and (max-width: 350px) {
+            &_period {
+                font-size: 16px;
+                .highlight {
+                    font-size: 13px;
+                }
+            }
+            &_num {
+                font-size: 28px;
+            }
+            &_btn {
+                width: 100%;
+            }
+        }
+    }
+    &_select {
+        width: 315px;
+        @media screen and (max-width: 575px) {
+            width: 100%;
+        }
+    }
+}
+
+#TabAttention {
+    margin-top: 45px;
+}
+
+#tabContentAttention {
+    margin-bottom: 16px;
+}
+
+@media screen and (max-width: 767px) {
+    #TabAttention {
+        .nav-link {
+            padding: 10px 20px;
+        }
+    }
+    #tabContentAttention {
+        .btn-download {
+            width: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 370px) {
+    #tabContentAttention {
+        .btn-download {
+            width: 80px;
+        }
+    }
+}

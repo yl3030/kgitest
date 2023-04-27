@@ -1,0 +1,145 @@
+.live {
+    padding-bottom: 95px;
+    &_title {
+        h2 {
+            padding-right: 15px;
+            font-size: 40px;
+            margin: 0;
+            width: calc(100% - 54px);
+        }
+        .btn-save {
+            width: 54px;
+            height: 54px;
+            svg {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+    &_teacher {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    &_time {
+        display: flex;
+        align-items: center;
+        padding: 8px;
+        background-color: $second-blue;
+        margin-bottom: 6px;
+        li {
+            position: relative;
+            color: $main-color;
+            padding-right: 23px;
+            &:last-child {
+                margin-right: 0;
+                &::after {
+                    display: none;
+                }
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: 20px;
+                background-color: $main-color;
+                top: 10px;
+                right: 11px;
+            }
+        }
+        .ch {
+            font-size: 24px;
+            margin-right: 8px;
+        }
+        .num {
+            font-size: 20px;
+            font-weight: 600;
+            font-family: $font-mont;
+        }
+    }
+    &_intro {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 44px;
+    }
+    &_sign {
+        justify-content: center;
+        .member_check_content {
+            width: auto !important;
+        }
+    }
+    &_table {
+        margin-bottom: 15px;
+    }
+    &Signup_table {
+        margin-bottom: 30px;
+    }
+    .btn-back-longArrow {
+        margin-bottom: 34px;
+    }
+    &_videoIntro {
+        font-size: 16px;
+        color: $gray-7d;
+        margin-bottom: 24px;
+    }
+    &_buyer {
+        // margin: 35px 0 25px;
+        margin-bottom: 25px;
+        h2 {
+            font-size: 24px;
+            margin-bottom: 25px;
+        }
+        &_content {
+            padding: 25px 35px;
+        }
+    }
+    @media screen and (max-width: 991px) {
+        padding-bottom: 55px;
+        &_teacher {
+            font-size: 20px;
+        }
+        .report_title {
+            margin-bottom: 13px !important;
+        }
+        &_time {
+            display: block;
+            li {
+                &::after {
+                    display: none;
+                }
+            }
+            .ch {
+                font-size: 20px;
+            }
+            .num {
+                font-size: 18px;
+            }
+        }
+        &_intro {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        &_videoIntro {
+            font-size: 14px;
+        }
+        &_table {
+            margin-bottom: 0;
+        }
+        &Signup_table {
+            margin-bottom: 80px;
+        }
+        &_buyer {
+            // margin: 90px 0 40px;
+            margin-bottom: 40px;
+            h2 {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+            &_content {
+                padding: 25px 15px;
+            }
+        }
+        .btn-back-longArrow {
+            margin-bottom: 60px;
+        }
+    }
+}

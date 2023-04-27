@@ -1,0 +1,279 @@
+.entity {
+    padding: 33px 0 80px;
+    .search {
+        margin-bottom: 30px;
+    }
+    &_tabContent {
+        background-color: #fff;
+        padding: 45px 40px;
+    }
+    &_tab {
+        background-color: transparent;
+        .nav-link {
+            background-color: rgba(4, 50, 122, 0.13);
+        }
+    }
+    &_search {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-bottom: 50px;
+        &_select {
+            display: flex;
+            align-items: center;
+            padding-right: 15px;
+            label {
+                font-size: 16px;
+                margin: 0;
+            }
+            &.place {
+                // width: 185px;
+                width: calc((100% - 113px) * 0.18);
+                label {
+                    width: 45px;
+                }
+                .select {
+                    width: calc(100% - 45px);
+                }
+            }
+            &.classify {
+                // width: 235px;
+                width: calc((100% - 113px) * 0.23);
+                label {
+                    width: 75px;
+                }
+                .select {
+                    width: calc(100% - 75px);
+                }
+            }
+            &.date {
+                // width: 410px;
+                width: calc((100% - 113px) * 0.41);
+                // width: calc(100% - 185px - 235px - 185px - 113px);
+                label {
+                    width: 45px;
+                }
+                .report_filter_range {
+                    width: calc(100% - 45px);
+                    padding: 0;
+                }
+            }
+        }
+        &_btn {
+            width: 113px;
+            height: 44px;
+            font-size: 18px;
+        }
+    }
+    &_list {
+        margin-left: -12px;
+        margin-right: -12px;
+        >div {
+            padding-left: 12px;
+            padding-right: 12px;
+        }
+    }
+    &_item {
+        display: flex;
+        background-color: $gray-f6;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        .btn-bg {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 175px;
+            height: 44px;
+            font-size: 18px;
+            font-weight: 500;
+        }
+    }
+    &_pic {
+        width: 34%;
+        padding-bottom: calc(34% * 0.7);
+        position: relative;
+        display: block;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            object-fit: cover;
+        }
+        .badge {
+            position: absolute;
+            background-color: #F33206;
+            top: 5px;
+            left: 10px;
+            font-size: 22px;
+            color: #fff;
+            padding: 6px 8px;
+        }
+    }
+    &_detail {
+        padding: 20px 15px 15px 25px;
+        width: 66%;
+    }
+    &_title {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 5px;
+        @include webkitBox;
+        -webkit-line-clamp: 2;
+        max-height: 58px;
+    }
+    &_teacher {
+        font-size: 18px;
+        font-weight: 500;
+        margin-bottom: 5px;
+    }
+    &_inform {
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        padding: 5px 18px;
+        margin-bottom: 8px;
+        li {
+            font-size: 16px;
+            color: $main-color;
+            font-family: $font-mont;
+            padding-right: 25px;
+            position: relative;
+            &::after {
+                position: absolute;
+                content: "";
+                width: 1px;
+                height: 15px;
+                background-color: $main-color;
+                top: 50%;
+                right: 12px;
+                transform: translateY(-50%);
+            }
+            &:last-child {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+    }
+    &_intro {
+        font-size: 16px;
+        margin-bottom: 5px;
+        @include webkitBox;
+        -webkit-line-clamp: 2;
+        max-height: 48px;
+    }
+    &_price {
+        font-family: $font-mont;
+        font-size: 16px;
+        margin-right: 12px;
+        margin: 0 12px 0 0;
+        .big {
+            margin-left: 3px;
+            font-size: 40px;
+        }
+    }
+    &_people {
+        font-family: $font-mont;
+        font-size: 16px;
+        color: $main-color;
+        margin: 0;
+        transform: translateY(7px);
+    }
+    &_num {
+        transform: translateY(10px);
+    }
+    &_time {
+        color: $gray-7d;
+        font-size: 14px;
+        margin: 0;
+        transform: translateY(7px);
+    }
+    &_remark {
+        text-align: center;
+        font-size: 16px;
+        color: $main-orange;
+        margin-bottom: 10px;
+        margin-top: 70px;
+    }
+    @media screen and (max-width: 1100px) {
+        &_tabContent {
+            padding: 20px 15px;
+        }
+        &_search {
+            &_select {
+                width: 100% !important;
+                margin-bottom: 13px;
+                label {
+                    width: 75px !important;
+                }
+                .select, .report_filter_range {
+                    width: calc(100% - 75px) !important;
+                }
+            }
+            &_btn {
+                width: 158px;
+            }
+        }
+    }
+    @media screen and (max-width: 991px) {
+        &_pic {
+            width: 100%;
+            padding-bottom: 70%;
+        }
+        &_detail {
+            width: 100%;
+            padding: 15px 20px 40px;
+        }
+        &_title {
+            font-size: 20px;
+        }
+        &_teacher {
+            font-size: 16px;
+        }
+        &_inform {
+            padding: 10px 13px;
+            display: block;
+            li {
+                margin-bottom: 3px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &::after {
+                    display: none;
+                }
+            }
+        }
+        &_num {
+            margin-bottom: 25px;
+        }
+        &_item {
+            .btn-bg {
+                width: 100%;
+                font-size: 16px;
+            }
+        }
+        &_remark {
+            font-size: 14px;
+        }
+        &_search {
+            &_select {
+                padding: 0;
+                .input-date {
+                    padding: 0 5px;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 450px) {
+        &_search {
+            &_select {
+                .input-date {
+                    background-image: none;
+                }
+            }
+        }
+    }
+}

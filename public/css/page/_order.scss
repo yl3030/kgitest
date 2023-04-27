@@ -1,0 +1,277 @@
+.order {
+    padding-bottom: 465px;
+    &_table {
+        margin-bottom: 95px;
+        >h2 {
+            font-size: 40px;
+            font-weight: normal;
+            margin-bottom: 5px;
+        }
+        @media screen and (max-width: 991px) {
+            margin-bottom: 35px;
+            >h2 {
+                font-size: 32px;
+            }
+            .member_product_table:not(.nochange) {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+    &_discount {
+        background-color: $gray-f6;
+        padding: 10px 25px;
+        border-bottom: 1px solid $gray-bb;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        span {
+            color: $main-color;
+            display: block;
+            text-align: right;
+        }
+        &_title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        &_num {
+            font-family: $font-mont;
+            font-weight: 300;
+            width: 125px;
+            font-size: 16px;
+            transform: translateY(2px);
+        }
+    }
+    &_total {
+        padding: 10px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        span {
+            color: $main-orange;
+            display: block;
+            text-align: right;
+        }
+        &_title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        &_num {
+            font-family: $font-mont;
+            font-weight: 600;
+            width: 125px;
+            font-size: 20px;
+        }
+    }
+    &_form {
+        padding: 30px 35px 50px; 
+        margin-bottom: 50px;
+        .member_input {
+            margin-bottom: 30px;
+        }
+        .member_join_address {
+            .row {
+                margin-left: -5px;
+                margin-right: -5px;
+                >div {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+            }
+        }
+        @media screen and (max-width: 767px) {
+            padding: 25px 15px 40px;
+            .member_input {
+                margin-bottom: 16px;
+                label {
+                    font-size: 15px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+            textarea {
+                border-color: $main-color !important;
+            }
+        }
+    }
+    &_pay {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 46px;
+        button {
+            transition: $transition-common;
+            width: calc(50% - 18px);
+            height: 72px;
+            background-color: $gray-bb;
+            color: #fff;
+            font-size: 18px;
+            &.active {
+                background-color: $main-orange;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            margin-bottom: 20px;
+            button {
+                height: auto;
+                padding: 20px;
+                font-size: 16px;
+                width: calc(50% - 5px);
+                // height: 100%;
+            }
+        }
+    }
+    &_notify {
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        p {
+            margin: 0;
+        }
+        .name {
+            font-size: 24px;
+            margin: 0 5px;
+        }
+        .deadline {
+            font-weight: 600;
+            color: $main-orange;
+        }
+        .num {
+            font-size: 24px;
+            font-weight: 600;
+            color: $main-orange;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 16px;
+            .name {
+                font-size: 16px;
+                margin: 0;
+            }
+            .deadline {
+                font-size: 20px;
+            }
+            .num {
+                font-size: 20px;
+            }
+        }
+    }
+    &_input {
+        margin-bottom: 70px;
+        &_item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            label {
+                font-size: 18px;
+                margin: 0 15px 0 0;
+                font-weight: 500;
+            }
+            .select {
+                width: 350px;
+                height: 50px;
+                .select_active {
+                    p {
+                        width: calc(100% - 24px);
+                    }
+                    svg {
+                        width: 24px;
+                    }
+                }
+                // background-image: url(../img/icon_arrow_down_bold.svg);
+                // background-size: 24px 15px;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &_content {
+            position: relative;
+        }
+        &_remark {
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            font-size: 14px;
+            color: $main-orange;
+        }
+        @media screen and (max-width: 767px) {
+            &_item {
+                label {
+                    width: 100%;
+                    margin-bottom: 5px;
+                }
+                .select {
+                    width: 100%;
+                }
+            }
+            &_content {
+                width: 100%;
+            }
+        }
+    }
+    @media screen and (max-width: 767px) {
+        padding-bottom: 75px;
+    }
+}
+
+.radio {
+    &_item {
+        display: flex;
+        // align-items: center;
+        margin-bottom: 18px;
+        .select{
+            width: 300px;
+            min-height: 43px;
+            height: 100%;
+            margin-left: 13px;
+            p {
+                color: $main-color;
+                word-break: break-all;
+            }
+        }
+    }
+    &_circle {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 1px solid $main-color;
+        transition: $transition-common;
+        margin-top: 5px;
+        cursor: pointer;
+        &.active {
+            background-color: $main-color;
+        }
+    }
+    &_content {
+        width: calc(100% - 16px);
+        padding-left: 8px;
+        p {
+            margin: 0;
+            color: $gray-7d;
+            font-size: 16px;
+        }
+    }
+    @media screen and (max-width: 500px) {
+        &_input {
+            p {
+                width: 75px;
+            }
+            .select {
+                margin: 0;
+                width: calc(100% - 75px);
+            }
+        }
+    }
+}
+
+.btn-myproduct {
+    width: 233px;
+    height: 55px;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

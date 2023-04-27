@@ -1,0 +1,79 @@
+.contact {
+    padding-bottom: 170px;
+    h2 {
+        font-size: 24px;
+        font-weight: normal;
+        color: $main-color;
+        margin-bottom: 5px;
+        @media screen and (max-width:767px) {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+    &_intro {
+        font-size: 16px;
+        color: $gray-7d;
+        margin-bottom: 43px;
+        @media screen and (max-width:767px) {
+            margin-bottom: 33px;
+        }
+    }
+    &_question {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+        label {
+            width: 80px;
+            font-size: 16px;
+            margin: 0;
+        }
+        .select {
+            width: calc(100% - 80px);
+            color: $main-color;
+        }
+        @media screen and (max-width:767px) {
+            label {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            select {
+                width: 100%;
+            }
+        }
+    }
+    .member_input {
+        input {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    .member_join_address {
+        .row {
+            margin-left: -5px;
+            margin-right: -5px;
+            >div {
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        }
+    }
+    &_term {
+        margin-bottom: 70px;
+        @media screen and (max-width:767px) {
+            margin-bottom: 60px;
+        }
+    }
+    &_banner {
+        border-bottom: 1px solid $gray-bb;
+        @media screen and (max-width:767px) {
+            border: 0;
+        }
+    }
+    .member_join_vertify {
+        margin-bottom: 50px;
+        @media screen and (max-width:767px) {
+            margin-bottom: 95px;
+        }
+    }
+}
