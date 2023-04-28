@@ -30,8 +30,8 @@ let course = [
         right: "next",
       },
       events: [
-        {title: "", start: course[0].date, end: course[0].date ,color:"transparent" },
-        {title: "", start: course[1].date, end: course[1].date ,color:"transparent" }
+        {title: "111", start: course[0].date, end: course[0].date ,color:"transparent" },
+        {title: "222", start: course[1].date, end: course[1].date ,color:"transparent" }
       ],
       height:700,
     });
@@ -68,7 +68,7 @@ let course = [
       })
     })
   }
-  set();
+  // set();
   $(document).on("click",".fc-next-button, .fc-prev-button",function(){
-    set();
+    // set();
   })
