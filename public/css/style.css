@@ -2003,6 +2003,10 @@ select {
   z-index: 10500;
 }
 
+#calendarModal {
+  height: 700px;
+}
+
 #calendarModal .modal-dialog {
   max-width: 1200px;
   margin-top: 100px;
