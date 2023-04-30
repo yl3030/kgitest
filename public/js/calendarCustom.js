@@ -51,29 +51,29 @@ let course = [
   //   set();
   // })
 
-  // function set(){
-  //   $(function(){
-  //     $(".fc-event-title.fc-sticky").each(function(i){
-  //       let calanderCourse = $("<div class='calander_course'></div>");
-  //       let badge;
-  //       if (course[i].free == 0) {
-  //         badge = $("<div class='badge badge-blue'>免費</div>")
-  //       }else {
-  //         badge = $("<div class='badge badge-red'>付費</div>")
-  //       }
-  //       let link = $("<a class='d-block font-18px'></a>").attr("href",course[i].target);
-  //       let time = course[i].time;
-  //       let br = $("<br>");
-  //       let name = $("<span class='mr-2'></span>").text(course[i].name);
-  //       let teacher = course[i].teacher;
-  //       link.append(time,br,name,teacher);
-  //       calanderCourse.append(badge, link);
+  function set(){
+    $(function(){
+      $(".fc-event-title.fc-sticky").each(function(i){
+        let calanderCourse = $("<div class='calander_course'></div>");
+        let badge;
+        if (course[i].free == 0) {
+          badge = $("<div class='badge badge-blue'>免費</div>")
+        }else {
+          badge = $("<div class='badge badge-red'>付費</div>")
+        }
+        let link = $("<a class='d-block font-18px'></a>").attr("href",course[i].target);
+        let time = course[i].time;
+        let br = $("<br>");
+        let name = $("<span class='mr-2'></span>").text(course[i].name);
+        let teacher = course[i].teacher;
+        link.append(time,br,name,teacher);
+        calanderCourse.append(badge, link);
   
-  //       $(this).append(calanderCourse);
-  //     })
-  //   })
-  // }
-  // set();
+        $(this).append(calanderCourse);
+      })
+    })
+  }
+  set();
   // $(document).on("click",".fc-next-button, .fc-prev-button",function(){
     // set();
   // })
