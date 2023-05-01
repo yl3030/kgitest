@@ -40,10 +40,17 @@
             {'Date': new Date(2023, 3, 18), 'Title': 'New Garfield movie comes out!', 'Link': 'https://garfield.com'},
             {'Date': new Date(2023, 4, 27), 'Title': '25 year anniversary', 'Link': 'https://www.google.com.au/#q=anniversary+gifts'},
         ];
-        var settings = {};
+        var settings = {
+            DateTimeFormat: 'dateformat',
+        };
         var element = document.getElementById('caleandar');
         caleandar(element, events, settings);
 
+            
+        let weekName = ["日","一","二","三","四","五","六"];
+        $(".cld-labels").find(".cld-label").each(function(i){
+            $(this).text(weekName[i]);
+        })
 
         function set(){
             $(function(){
