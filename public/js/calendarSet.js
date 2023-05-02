@@ -49,15 +49,15 @@ for(let i=0; i<course.length; i++) {
 }
 
 var events = [
-    {'Date': day[0]},
-    {'Date': day[1]},
-    {'Date': day[2]},
-    {'Date': day[3]},
-    {'Date': day[4]},
+    {'Date': day[0], 'Title': "ll"},
+    {'Date': day[1], 'Title': "ll"},
+    {'Date': day[2], 'Title': "ll"},
+    {'Date': day[3], 'Title': "ll"},
+    {'Date': day[4], 'Title': "ll"},
 ];
 
 var settings = {
-    DateTimeFormat: 'dateformat',
+    // DateTimeFormat: 'dateformat',
 };
 var element = document.getElementById('caleandar');
 caleandar(element, events, settings);
