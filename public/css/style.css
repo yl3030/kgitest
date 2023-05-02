@@ -2003,10 +2003,6 @@ select {
   z-index: 10500;
 }
 
-#calendarModal {
-  height: 700px;
-}
-
 #calendarModal .modal-dialog {
   max-width: 1200px;
   margin-top: 100px;
@@ -2110,6 +2106,118 @@ select {
 #calendarModal .fc-prev-button, #calendarModal .fc-next-button, #calendarModal .fc-icon-chevron-left, #calendarModal .fc-icon-chevron-right {
   width: 30px !important;
   height: 30px;
+}
+
+#calendarModal #caleandar .cld-main {
+  width: 100%;
+}
+
+#calendarModal #caleandar .cld-datetime {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: -50px;
+  color: #fff;
+  max-width: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#calendarModal #caleandar .cld-datetime .today {
+  font-size: 24px;
+  width: auto;
+  margin: 0 35px;
+}
+
+#calendarModal #caleandar .cld-datetime .cld-nav {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#calendarModal #caleandar .cld-datetime .cld-nav svg {
+  width: 13px;
+  height: auto;
+}
+
+#calendarModal #caleandar .cld-labels {
+  border-top: 1px solid #04327A;
+  border-bottom: 1px solid #04327A;
+}
+
+#calendarModal #caleandar .cld-labels .cld-label {
+  font-size: 18px;
+  color: #04327A;
+  height: 115px;
+  border-right: 1px solid #04327A;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 500;
+}
+
+#calendarModal #caleandar .cld-labels .cld-label:first-child {
+  border-left: 1px solid #04327A;
+}
+
+#calendarModal #caleandar .cld-days {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#calendarModal #caleandar .cld-days .cld-day {
+  height: auto;
+  min-height: 115px;
+  border-color: #04327A;
+  border-left: 0;
+  border-top: 0;
+}
+
+#calendarModal #caleandar .cld-days .cld-day:nth-child(7n+1) {
+  border-left: 1px solid #04327A;
+}
+
+#calendarModal #caleandar .cld-days .cld-day .cld-number {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+#calendarModal #caleandar .cld-days .cld-day.today {
+  border: 4px solid #FF623E;
+}
+
+#calendarModal #caleandar .calander_course {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+#calendarModal #caleandar .calander_course a {
+  color: #000;
 }
 
 @media screen and (max-width: 575px) {
