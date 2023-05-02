@@ -42,28 +42,26 @@ let course = [
 ]
 
 let day = new Array;
-let events = new Array;
+// let events = new Array;
 for(let i=0; i<course.length; i++) {
     day[i] = new Date(course[i].date);
-    events[i] = {'Date': day[i], 'Title': 'fff'};
+    // events[i] = {'Date': day[i], 'Title': 'fff'};
 }
 
-// var events = [
-//     {'Date': new Date(course[0].date), 'Title': ''},
-//     {'Date': new Date(course[1].date), 'Title': ''},
-//     {'Date':  new Date(course[2].date), 'Title': ''},
-// ];
+var events = [
+    {'Date': day[0]},
+    {'Date': day[1]},
+    {'Date': day[2]},
+    {'Date': day[3]},
+    {'Date': day[4]},
+];
+
 var settings = {
     DateTimeFormat: 'dateformat',
 };
 var element = document.getElementById('caleandar');
 caleandar(element, events, settings);
 
-    
-// let weekName = ["日","一","二","三","四","五","六"];
-// $(".cld-labels").find(".cld-label").each(function(i){
-//     $(this).text(weekName[i]);
-// })
 
 let todayMonth;
 let monthData = new Array;
@@ -73,7 +71,6 @@ function set(){
         for(let i=0; i<day.length; i++) {
             todayMonth = $(".cld-datetime").find(".today").attr("data-month");
             let dayGetMonth = day[i].getMonth() + 1;
-            // console.log("todayMonth=" + todayMonth + ",dayGetMonth=" + dayGetMonth);
             if(dayGetMonth == todayMonth) {
                 monthData[j] = {
                     free: course[i].free,
