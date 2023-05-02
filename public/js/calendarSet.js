@@ -5,6 +5,7 @@ let course = [
         name: "課程名稱",
         teacher: "高偉君",
         date: "2023, 05, 01",
+        month: 3,
         target: "這邊放連結",
     },
     {
@@ -13,6 +14,7 @@ let course = [
         name: "課程名稱",
         teacher: "高偉君",
         date: "2023, 05, 12",
+        month: 4,
         target: "這邊放連結",
     },
     {
@@ -21,6 +23,7 @@ let course = [
         name: "課程名稱",
         teacher: "高偉君",
         date: "2023, 06, 12",
+        month: 5,
         target: "這邊放連結",
     },
     {
@@ -29,6 +32,7 @@ let course = [
         name: "課程名稱",
         teacher: "高偉君",
         date: "2023, 07, 12",
+        month: 6,
         target: "這邊放連結",
     },
     {
@@ -37,6 +41,7 @@ let course = [
         name: "課程名稱",
         teacher: "高偉君",
         date: "2023, 03, 12",
+        month: 7,
         target: "這邊放連結",
     }
 ]
@@ -68,9 +73,9 @@ let monthData = new Array;
 function set(){
     $(function(){
         let j=0;
-        for(let i=0; i<day.length; i++) {
+        for(let i=0; i<course.length; i++) {
             todayMonth = $(".cld-datetime").find(".today").attr("data-month");
-            let dayGetMonth = day[i].getMonth() + 1;
+            let dayGetMonth = course[i].month;
             if(dayGetMonth == todayMonth) {
                 monthData[j] = {
                     free: course[i].free,
