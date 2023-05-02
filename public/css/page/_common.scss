@@ -1791,8 +1791,8 @@ select {
 
     @media screen and (max-width: 575px) {
         .modal-content {
-            padding-left: 20px;
-            padding-right: 20px;
+            padding-left: 15px;
+            padding-right: 15px;
             padding-top: 60px;
             // height: calc(100vh - 150px);
         }
@@ -1804,10 +1804,11 @@ select {
         }
         .badge {
             font-size: 12px;
+            padding: 3px 5px;
         }
         .calander_course {
             a {
-                font-size: 13px;
+                font-size: 12px;
             }
         }
         .modal-dialog {

@@ -2222,8 +2222,8 @@ select {
 
 @media screen and (max-width: 575px) {
   #calendarModal .modal-content {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
     padding-top: 60px;
   }
   #calendarModal .fc-col-header-cell-cushion {
@@ -2234,9 +2234,10 @@ select {
   }
   #calendarModal .badge {
     font-size: 12px;
+    padding: 3px 5px;
   }
   #calendarModal .calander_course a {
-    font-size: 13px;
+    font-size: 12px;
   }
   #calendarModal .modal-dialog {
     margin-top: 80px;
