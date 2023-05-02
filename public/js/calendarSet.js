@@ -28,22 +28,6 @@ let course = [
         time: "0:00",
         name: "課程名稱",
         teacher: "高偉君",
-        date: "2023, 03, 12",
-        target: "這邊放連結",
-    },
-    {
-        free: 1,
-        time: "0:00",
-        name: "課程名稱",
-        teacher: "高偉君",
-        date: "2023, 03, 12",
-        target: "這邊放連結",
-    },
-    {
-        free: 1,
-        time: "0:00",
-        name: "課程名稱",
-        teacher: "高偉君",
         date: "2023, 07, 12",
         target: "這邊放連結",
     }
@@ -96,17 +80,22 @@ function set(){
     
                 $(".cld-title").eq(i).append(calanderCourse);
             }else {
-                console.log("#########");
+                // console.log("#########");
             }
         }
     })
 }
-set();
+// set();
 
 $(function(){
-    $(".cld-nav").click(function(){
-        console.log("click!!!")
-        // todayMonth = todayMonth;
-        set();
+    $(".cld-nav").each(function(){
+        $(this).click(function(){
+            console.log("click!!!")
+            set();
+        })
     })
 })
+
+  $('#calendarModal').on('shown.bs.modal', function (event) {
+    set();
+  })
