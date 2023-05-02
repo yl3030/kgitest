@@ -45,7 +45,7 @@ let day = new Array;
 let events = new Array;
 for(let i=0; i<course.length; i++) {
     day[i] = new Date(course[i].date);
-    events[i] = {'Date': day[i], 'Title': ''};
+    events[i] = {'Date': day[i], 'Title': 'fff'};
 }
 
 // var events = [
@@ -122,7 +122,7 @@ $(document).on("click",".cld-nav",function(){
 //         })
 //     })
 // })
-
-  $('#calendarModal').on('shown.bs.modal', function (event) {
     set();
-  })
+
+//   $('#calendarModal').on('shown.bs.modal', function (event) {
+//   })
