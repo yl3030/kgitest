@@ -49,11 +49,11 @@ for(let i=0; i<course.length; i++) {
 }
 
 var events = [
-    {'Date': day[0], 'Title': "ll"},
-    {'Date': day[1], 'Title': "ll"},
-    {'Date': day[2], 'Title': "ll"},
-    {'Date': day[3], 'Title': "ll"},
-    {'Date': day[4], 'Title': "ll"},
+    {'Date': new Date(2023, 3, 18), 'Title': "ll"},
+    {'Date': new Date(2023, 4, 19), 'Title': "ll"},
+    {'Date': new Date(2023, 5, 20), 'Title': "ll"},
+    {'Date': new Date(2023, 6, 21), 'Title': "ll"},
+    {'Date': new Date(2023, 7, 22), 'Title': "ll"},
 ];
 
 var settings = {
